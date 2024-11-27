@@ -13,3 +13,5 @@ Call anagram("Word") to get the anagram of a word
 Call splitWords("Your text") if you need a list of words from a text
 
 Call main("your text or word", True) to print results at the terminal
+
+If you call the file Anagram.py you can input your text into main() by the prompt
