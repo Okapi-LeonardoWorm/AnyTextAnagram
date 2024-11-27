@@ -1,11 +1,11 @@
 from random import sample
 
 
-def splitWords(text):
+def splitWords(text:str) -> list[str]:
     return text.split(" ")
 
 
-def anagram(word):
+def anagram(word:str) -> str:
     if len(word) < 2:
         return f"{word} "
     if len(word) == 2:
@@ -21,17 +21,18 @@ def anagram(word):
         return f"{a} "
 
 
-def main(text):
-    print(f"\n\nOriginal:\n{text}\n")
+def main(text:str, printResults:bool=False) -> str:
     wl = splitWords(text)
     at = ""
     for w in wl:
         at = at+anagram(w)
     
-    print(f"Anagram:\n{at}\n\n")
+    if printResults:
+        print(f"\n\nOriginal:\n{text}\n")
+        print(f"Anagram:\n{at}\n\n")
+    
     return at
 
 
-text = "Abelha é um inseto"
-
-main(text)
+if __name__ == "__main__":
+    main(input("Enter text: "))
